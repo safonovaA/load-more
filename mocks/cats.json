@@ -1,0 +1,64 @@
+{
+	"cats": [
+		{
+			"id": "1",
+			"name": "Кексик",
+			"breed": "Американский керл",
+			"image": "amerikanskiy-kerl.jpg"
+		},
+		{
+			"id": "2",
+			"name": "Барсик",
+			"breed": "Бамбино",
+			"image": "bambino.jpg"
+		},
+		{
+			"id": "3",
+			"name": "Бомба",
+			"breed": "Абиссинская",
+			"image": "abissinskaya-koshka.jpg"
+		},
+		{
+			"id": "4",
+			"name": "Роза",
+			"breed": "Бенгальская",
+			"image": "bengalskaya-koshka.jpg"
+		},
+		{
+			"id": "5",
+			"name": "Василиса",
+			"breed": "Сибирская",
+			"image": "sibirskaya-koshka.jpg"
+		},
+		{
+			"id": "6",
+			"name": "Том",
+			"breed": "Корниш рекс",
+			"image": "cornish-rex.jpg"
+		},
+		{
+			"id": "7",
+			"name": "Мурзик",
+			"breed": "Карельский бобтейл",
+			"image": "karelskiy-bobteyl.jpg"
+		},
+		{
+			"id": "8",
+			"name": "Снежинка",
+			"breed": "Ориентальная",
+			"image": "orientalnaya.jpg"
+		},
+		{
+			"id": "9",
+			"name": "Пушинка",
+			"breed": "Мейн кун",
+			"image": "maine-coon.jpg"
+		},
+		{
+			"id": "10",
+			"name": "Коржик",
+			"breed": "Европейская",
+			"image": "yevropeyskaya-korotkosherstnaya-koshka.jpg"
+		}
+	]
+}

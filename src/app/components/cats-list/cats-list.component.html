@@ -1,0 +1,22 @@
+<h2>Котейки</h2>
+<ul class=" center">
+    <li *ngFor="let cat of cats">
+        <a [routerLink]="[cat.id]" #cat>
+            <img [src]="'assets/cats/' +  cat.image" [alt]="'Милое фото котейки по имени ' + cat.name">
+            <div>Меня зовут <b>{{cat.name}}</b></div>
+            <div>Моя порода - {{cat.breed}}</div>
+        </a>
+    </li>
+</ul>
+
+<ng-container *ngIf="loading">
+    <app-spinner class="center"></app-spinner>
+    <span class="visually-hidden" role="status">Loading...</span>
+</ng-container>
+
+<button class="center" *ngIf="page < 3 && !loading"
+    (keydown.enter)="loadCats(true)"
+    (keydown.space)="loadCats(true)"
+    (click)="loadCats(false)">
+    Load more
+</button>
