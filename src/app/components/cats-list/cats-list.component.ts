@@ -13,6 +13,7 @@ export class CatsListComponent implements OnInit, AfterViewInit {
   public page = 0;
   public loading = false;
   public shouldSetFocus = false;
+  public isFakeClick = false;
   @ViewChildren('cat') public catElements: QueryList<ElementRef>;
 
   constructor(
@@ -27,7 +28,7 @@ export class CatsListComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.catElements.changes.subscribe((cats) => {
       const firstLoadedElement = cats._results[(this.page - 1) * this.PAGE_SIZE].nativeElement;
-      if (this.shouldSetFocus) {
+      if (this.shouldSetFocus || this.isFakeClick) {
         setTimeout(() => {
           firstLoadedElement.focus();
         }, 0);
@@ -45,7 +46,15 @@ export class CatsListComponent implements OnInit, AfterViewInit {
         this.loading = false;
         this.cats = this.cats.concat(cats);
         this.cdRef.markForCheck();
-      }, 700);
+      }, 1200);
     });
+  }
+
+  public handleMousedown(event: MouseEvent) {
+    this.isFakeClick = this.isFakeMousedown(event);
+  }
+
+  private isFakeMousedown(event: MouseEvent) {
+    return event.buttons === 0;
   }
 }

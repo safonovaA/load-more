@@ -17,6 +17,7 @@
 <button class="center" *ngIf="page < 3 && !loading"
     (keydown.enter)="loadCats(true)"
     (keydown.space)="loadCats(true)"
+    (mousedown)="handleMousedown($event)"
     (click)="loadCats(false)">
     Load more
 </button>
