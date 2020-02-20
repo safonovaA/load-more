@@ -9,9 +9,9 @@
     </li>
 </ul>
 
-<ng-container *ngIf="loading">
-    <app-spinner class="center"></app-spinner>
-    <span class="visually-hidden" role="status">Loading...</span>
+<ng-container>
+    <app-spinner class="center" *ngIf="loading"></app-spinner>
+    <span class="visually-hidden" role="status">{{ loading ? 'Загрузка.' : ''}} </span>
 </ng-container>
 
 <button class="center" *ngIf="page < 3 && !loading"
